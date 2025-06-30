@@ -1,0 +1,380 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.navbar {
+  width: 100%;
+  padding: 0 1rem;
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #e2d0d0;
+  align-items: center;
+  color: rgb(8, 7, 7);
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar a {
+  color: black;
+  text-decoration: none;
+}
+
+footer {
+  background-color: #e2d0d0;
+  color: #000;
+  text-align: center;
+  padding: 0.4rem;
+  margin-top: 2rem;
+}
+
+footer .social-links {
+  margin-top: 0.5rem;
+}
+
+/* === Responsive Styles === */
+
+/* Mobile-first tweaks */
+
+/* Medium devices (Tablets) */
+@media screen and (min-width: 600px) {
+  .navbar ul {
+    justify-content: flex-end;
+    gap: 2rem;
+  }
+
+}
+
+/* ToggleMenu */
+
+#nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: static;
+}
+
+#nav-links li a {
+  color: black;
+  text-decoration: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+#nav-links li a:hover {
+  color: #cf1717;
+}
+
+.hamburger {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1001;
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Mobile Styles */
+
+@media screen and (min-width: 769px) {
+  .hamburger {
+    display: none;
+  }
+
+  #nav-links {
+    display: flex !important;
+    flex-direction: row;
+    position: static;
+    background-color: transparent;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  /* Hamburger /ToggleMenu */
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-end;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+  }
+
+  .hamburger {
+    display: block;
+    position: fixed;
+    right: 2rem;
+    top: 1.2rem;
+    z-index: 1001;
+    background-color: #1e1e1e;
+    font-size: 1.8rem;
+    border: none;
+    padding: 0.5rem 0.8rem;
+    border-radius: 4px;
+  }
+
+  
+  #nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+    background-color: #f0f0f0;
+    text-align: center;
+    margin-top: 90px;
+    z-index: 1000;
+    transition: max-height 0.4s ease;
+  }
+
+  #nav-links.show {
+    display: block;
+  }
+
+  #nav-links li {
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+
+  #nav-links li a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+  }
+
+  .navbar ul li {
+    margin: 0.5rem 0;
+  }
+
+  /* Site title */
+  .site-title {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 1001;
+    padding: 0.5rem 0.8rem;
+    border-radius: 4px;
+    transition: opacity 0.3s ease;
+  }
+
+  .bottom-right {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 1001;
+    color: #a4a2a2;
+    font-size: 20px;
+    padding: 0.5rem 0.8rem;
+    border-radius: 4px;
+    transition: opacity 0.3s ease;
+  }
+}
+
+
+/* Site title */
+
+.logo-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.site-title {
+  position: fixed;
+  height: 50px;
+  top: 0.5rem;
+  left: 1rem;
+  z-index: 1001;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  margin-right: 2rem;
+  transition: opacity 0.4s ease;
+}
+
+.bottom-right {
+  position: fixed;
+  padding-left: 150px;
+  font-size: 25px;
+  transition: opacity 0.3s ease;
+}
+
+@media (max-width: 600px) {
+  .site-title {
+    height: 40px;
+  }
+
+  .bottom-right {
+    position: fixed;
+    top: 0.5rem;
+    left: 6.5rem;
+    z-index: 1001;
+    font-size: 20px;
+    padding: 0.5rem 0.8rem;
+    border-radius: 4px;
+    transition: opacity 0.3s ease;
+  }
+}
+
+/* ABOUT SECTIONS */
+
+/* HERO SECTION */
+.about-hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url('/images/hero.avif') center/cover no-repeat;
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.about-hero h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.about-hero p {
+  font-size: 20px;
+  color: #eee;
+}
+
+.about-section {
+  padding: 60px 20px;
+  background-color: #fff;
+}
+
+.about-section.alt {
+  background-color: #f0f0f0;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.about-section h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #1c1c1c;
+}
+
+.about-section p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.values-list {
+  list-style: none;
+  padding-left: 0;
+  font-size: 16px;
+}
+
+.values-list li {
+  margin-bottom: 10px;
+}
+
+/* DESIGNER SECTION */
+.designer-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: center;
+}
+
+.designer-text {
+  flex: 1;
+}
+
+.designer-text blockquote {
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+  border-left: 6px solid #eee;
+  padding-left: 20px;
+  margin: 20px 0;
+  line-height: 1.6;
+}
+
+.designer-photo{
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.designer-photo img {
+  max-width: 300px;
+  border-radius: 0px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .designer-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .designer-photo img {
+    width: 80%;
+  }
+}
+
+
+/* WhatsApp Floating Icon Style */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.whatsapp-float img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-float img:hover {
+    transform: scale(1.1);
+}
+
+#scrollTopImg {
+  display: none;
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  z-index: 999;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#scrollTopImg:hover {
+  transform: scale(1.1);
+  opacity: 0.9;
+}

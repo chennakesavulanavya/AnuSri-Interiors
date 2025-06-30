@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | AnuSri Interiors</title>
+    <link rel="stylesheet" href="gallery.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo-group">
+            <img class="site-title" id="siteTitle" data-href="index.html" src="images/anusri.png"
+                alt="AnuSri Interiors Logo">
+            <p class="bottom-right"><sub>𝕀𝕟𝕥𝕖𝕣𝕚𝕠𝕣𝕤</sub></p>
+        </div>
+
+        <div class="nav-container">
+            <!-- Navigation Links -->
+            <ul id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <!-- Hamburger Icon -->
+            <button class="hamburger" onclick="toggleMenu()">
+                &#9776;
+            </button>
+        </div>
+
+    </nav>
+
+    <!-- Gallery -->
+
+    <section class="gallery-section">
+        <h2>Our Work</h2>
+        <div class="gallery-grid">
+            <div class="gallery-slider" id="gallerySlider">
+                <div class="gallery-slide">
+
+                    <img src="images/living.jpg" alt="Living Room" onclick="openLightbox(this)" />
+                    <figcaption>Modern Living Room</figcaption>
+
+                </div>
+
+                <div class="gallery-slide">
+
+                    <img src="images/bedroom.jpg" alt="Bedroom" onclick="openLightbox(this)" />
+                    <figcaption>Cozy Bedroom</figcaption>
+
+                </div>
+
+                <div class="gallery-slide">
+
+                    <img src="images/kitchen.jpg" alt="Kitchen" onclick="openLightbox(this)" />
+                    <figcaption>Stylish Kitchen</figcaption>
+
+                </div>
+                <div class="gallery-slide">
+
+                    <img src="images/office.jpg" alt="Office Space" onclick="openLightbox(this)" />
+                    <figcaption>Elegant Office Space</figcaption>
+
+                </div>
+                <div class="gallery-slide">
+
+                    <img src="images/dining.jpg" alt="Dining Area" onclick="openLightbox(this)" />
+                    <figcaption>Spacious Dining Area</figcaption>
+
+                </div>
+                <div class="gallery-slide">
+
+                    <img src="images/bathroom.jpg" alt="Bathroom" onclick="openLightbox(this)" />
+                    <figcaption>Minimalistic Bathroom</figcaption>
+
+                </div>
+                <div class="gallery-slide">
+
+                    <img src="images/ceiling.jpg" alt="Ceiling" onclick="openLightbox(this)" />
+                    <figcaption>Elegant Ceiling Designs</figcaption>
+
+                </div>
+                <div class="gallery-slide">
+
+                    <img src="images/paint.jpg" alt="Painting" onclick="openLightbox(this)" />
+                    <figcaption>Beauty and Brushstrokes</figcaption>
+
+                </div>
+                <div class="gallery-slide">
+                    <img src="images/electric.jpg" alt="Electric" onclick="openLightbox(this)">
+                    <figcaption>Safest Electric Work</figcaption>
+                </div>
+            </div>
+        </div>
+
+        <!-- DOT INDICATOR -->
+        <div class="dots-container" id="dotsContainer"></div>
+
+    </section>
+    <!-- ✅ Lightbox HTML (Add just before closing body) -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="close-btn" onclick="closeLightbox()">&times;</span>
+        <img id="lightbox-img" src="" alt="Expanded View">
+    </div>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/916305099540" class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp">
+        <img src="images/whatsapp.png" alt="WhatsApp Chat" />
+    </a>
+
+    <img src="images/scroll.png" id="scrollTopImg" alt="Scroll to Top" title="Go to Top" />
+
+    <script src="script.js"></script>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 AnuSri Interiors. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>

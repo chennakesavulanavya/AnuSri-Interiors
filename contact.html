@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | AnuSri Interiors</title>
+  <link rel="stylesheet" href="contact.css" />
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo-group">
+      <img class="site-title" id="siteTitle" data-href="index.html" src="images/anusri.png" alt="AnuSri Interiors Logo">
+      <p class="bottom-right"><sub>𝕀𝕟𝕥𝕖𝕣𝕚𝕠𝕣𝕤</sub></p>
+    </div>
+
+    <div class="nav-container">
+      <!-- Navigation Links -->
+      <ul id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <!-- Hamburger Icon -->
+      <button class="hamburger" onclick="toggleMenu()">
+        &#9776;
+      </button>
+    </div>
+  </nav>
+
+  <!-- Contact Section -->
+  <main class="contact-page">
+
+    <section class="contact-info">
+      <h2>Get in Touch</h2>
+      <p>We'd love to hear from you. Feel free to reach out using the information below.</p>
+
+      <div class="contact-details">
+        <p><strong>📍 Address:</strong> 143, SNR HOMES, INDIAN OIL BUNK,
+          <br>Sundar Rao Nagar, Bahadurpally, Hyderabad, Telangana 500043
+        </p>
+        <p><strong>📞 Phone:</strong>
+          <a href="tel: +91 63050 99540" style="display: inline;">63050 99540 ;</a>
+          <a href="tel: +91 73960 97737" style="display: inline;">73960 97737</a>
+        </p>
+        <p><strong>📧 Email:</strong> <a
+            href="mailto:anusriinteriordesingners@gmail.com">anusriinteriordesingners@gmail.com</a></p>
+      </div>
+    </section>
+
+    <section class="contact-hero">
+      <div class="container">
+        <h1>Contact Us</h1>
+        <p>We'd love to hear from you. Reach out for inquiries, collaborations, or just a friendly hello!</p>
+      </div>
+    </section>
+
+    <section class="contact-form-section">
+      <div class="container">
+        <form name="contact" class="contact-form" data-netlify="true" method="POST" action="thanks.html">
+          <input type="hidden" name="form-name" value="contact">
+
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required autocomplete="name" />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required autocomplete="email" />
+
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" required autocomplete="tel" />
+
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="5" autocomplete="on"></textarea>
+
+          <button type="submit">Send Message</button>
+
+        </form>
+      </div>
+    </section>
+
+    <section class="social-links">
+      <h3>Connect with Us</h3>
+      <div class="social-icons">
+        <a href="https://www.youtube.com/@AnuSri954" target="_blank" aria-label="YouTube">
+          <img src="images/youtube.png" alt="Instagram">
+        </a>
+        <a href="https://www.instagram.com/anusriintdesigners?igsh=MzkxOTZ3cHBxYmls" target="_blank"
+          aria-label="Instagram">
+          <img src="images/instagram.png" alt="Instagram">
+        </a>
+        <a href="mailto:anusriinteriordesingners@gmail.com" aria-label="Email">
+          <img src="images/gmail.png" alt="Email">
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/916305099540" class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp">
+    <img src="images/whatsapp.png" alt="WhatsApp Chat" />
+  </a>
+
+  <img src="images/scroll.png" id="scrollTopImg" alt="Scroll to Top" title="Go to Top" />
+
+  <script src="script.js"></script>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 AnuSri Interiors. All rights reserved.</p>
+  </footer>
+
+</body>
+
+</html>
